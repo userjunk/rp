@@ -1,0 +1,2 @@
+rnorm(n, mean = , sd = ) is used to generate n normal random numbers with arguments mean and sd
+runif(n, min = , max = ) is used to generate n uniform random numbers lie in the interval (min, max)
