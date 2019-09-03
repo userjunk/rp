@@ -1,0 +1,77 @@
+Syntax:
+---->pie(x, labels, radius, main, col, clockwise)
+-- x is a vector containing the numeric values used in the pie chart.
+--labels is used to give description to the slices.
+--radius indicates the radius of the circle of the pie chart.(value between -1 and +1).
+--main indicates the title of the chart.
+--col indicates the color palette.
+--clockwise is a logical value indicating if the slices are drawn clockwise or anti clockwise.
+
+Example
+# Create data for the graph.
+x <- c(21, 62, 10, 53)
+labels <- c("London", "New York", "Singapore", "Mumbai")
+
+# Give the chart file a name.
+png(file = "city.jpg")
+
+# Plot the chart.
+pie(x,labels)
+
+# Save the file.
+dev.off()
+
+
+Example
+# Create data for the graph.
+x <- c(21, 62, 10, 53)
+labels <- c("London", "New York", "Singapore", "Mumbai")
+
+# Give the chart file a name.
+png(file = "city_title_colours.jpg")
+
+# Plot the chart with title and rainbow color pallet.
+pie(x, labels, main = "City pie chart", col = rainbow(length(x)))
+
+# Save the file.
+dev.off()
+
+Slice Percentages and Chart Legend
+We can add slice percentage and a chart legend by creating additional chart variables.
+
+# Create data for the graph.
+x <-  c(21, 62, 10,53)
+labels <-  c("London","New York","Singapore","Mumbai")
+
+piepercent<- round(100*x/sum(x), 1)
+
+# Give the chart file a name.
+png(file = "city_percentage_legends.jpg")
+
+# Plot the chart.
+pie(x, labels = piepercent, main = "City pie chart",col = rainbow(length(x)))
+legend("topright", c("London","New York","Singapore","Mumbai"), cex = 0.8,
+       fill = rainbow(length(x)))
+
+# Save the file.
+dev.off()
+
+3D Pie Chart
+A pie chart with 3 dimensions can be drawn using additional packages. 
+The package plotrix has a function called pie3D() that is used for this.
+
+# Get the library.
+library(plotrix)
+
+# Create data for the graph.
+x <-  c(21, 62, 10,53)
+lbl <-  c("London","New York","Singapore","Mumbai")
+
+# Give the chart file a name.
+png(file = "3d_pie_chart.jpg")
+
+# Plot the chart.
+pie3D(x,labels = lbl,explode = 0.1, main = "Pie Chart of Countries ")
+
+# Save the file.
+dev.off()
