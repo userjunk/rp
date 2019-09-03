@@ -1,0 +1,4 @@
+function_name <- function(arg_1, arg_2, ...) 
+{
+   Function body 
+}
