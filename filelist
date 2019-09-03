@@ -5,3 +5,4 @@ function
 string
 vector
 builtinfunction
+operators
