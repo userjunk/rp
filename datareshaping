@@ -213,3 +213,13 @@ When we execute the above code, it produces the following result −
 18    E   65    135      1226     14
 19    E   70    135      3318     17
 20    E   75    135       542      1
+
+
+# sort by mpg
+newdata <- mtcars[order(mpg),]
+
+# sort by mpg and cyl
+newdata <- mtcars[order(mpg, cyl),]
+
+#sort by mpg (ascending) and cyl (descending)
+newdata <- mtcars[order(mpg, -cyl),]
