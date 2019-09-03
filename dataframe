@@ -216,3 +216,13 @@ When we execute the above code, it produces the following result −
 6      6     Rasmi       578.00     2013-05-21       IT
 7      7     Pranab      722.50     2013-07-30       Operations
 8      8     Tusar       632.80     2014-06-17       Fianance
+
+
+# sort by mpg
+newdata <- mtcars[order(mpg),]
+
+# sort by mpg and cyl
+newdata <- mtcars[order(mpg, cyl),]
+
+#sort by mpg (ascending) and cyl (descending)
+newdata <- mtcars[order(mpg, -cyl),]
